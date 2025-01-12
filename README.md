@@ -1,4 +1,4 @@
-## Explore My Projects  
+## Links to My Projects  
 
 Here are some of the projects I've worked on. Each one showcases my skills and passion for creating interactive and user-friendly applications. Take a look and enjoy the experience!
 
