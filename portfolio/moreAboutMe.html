@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="https://cdn-www.dora.run/__dora__/morpheus/static/images/ai/dora-ai.png"
+        type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>About me - Arhum Hussain</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+
+
+        * {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body::-webkit-scrollbar {
+            width: 2px;
+            background-color: #0f0f0f;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: white !important;
+        }
+
+        body::-webkit-scrollbar {
+            width: 2px;
+            background-color: #0f0f0f !important;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: white !important;
+        }
+
+        textarea::-webkit-scrollbar {
+            width: 4px;
+            background-color: #0f0f0f !important;
+        }
+
+        textarea::-webkit-scrollbar-thumb {
+            background-color: white;
+        }
+
+        ::-moz-selection {
+            color: white;
+            background: gray;
+        }
+
+        ::selection {
+            color: white;
+            background: gray;
+        }
+
+        body {
+            background-color: #0f0f0f;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: "Syne", sans-serif;
+            overflow-x: hidden;
+        }
+
+        main {
+            overflow: hidden;
+        }
+
+        header {
+            width: 100%;
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            padding-bottom: 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 23px;
+        }
+
+        .loader {
+            width: 25px;
+            height: 25px;
+            background: #353535;
+            display: block;
+            margin-left: 10px;
+            box-sizing: border-box;
+            animation: rotationBack 1s ease-in-out infinite reverse;
+        }
+
+        .loader::before {
+            content: '';
+            box-sizing: border-box;
+            left: 0;
+            top: 0;
+            transform: rotate(45deg);
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: #2e2e2e;
+        }
+
+        .loader::after {
+            content: '';
+            box-sizing: border-box;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background: rgb(0, 0, 0);
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes rotationBack {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        ul li {
+            color: rgb(168, 166, 166);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: rgb(168, 166, 166);
+            font-family: "Montserrat";
+        }
+
+        nav ul li:nth-child(5) {
+            background: #2726265c;
+            padding: 10px 19px;
+            border-radius: 8px;
+            transition: all 0.3s;
+            color: #4b4a4a;
+            cursor: unset;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #1a1a1a;
+            transition: right 0.4s ease;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            padding-top: 50px;
+            padding-left: 20px;
+        }
+
+        ul a {
+            color: black;
+
+        }
+
+        #backBtn {
+            background: rgb(24, 24, 24);
+            padding: 10px 19px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        main {
+            height: 100vh;
+            width: 100%;
+        }
+
+        #mainDetails {
+            width: 100%;
+            height: 90%;
+            display: flex;
+            padding: 30px;
+            justify-content: center;
+            gap: 5%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .right-box {
+            flex-direction: column;
+            width: 60%;
+            animation-duration: 1s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-box h1 {
+            margin-bottom: 20px;
+            color: #f2ddcc;
+            width: 100%;
+            border-bottom: 2px solid rgba(220, 220, 220, 0.326);
+
+        }
+
+        .left-box {
+            width: 30%;
+            background-image: url(img/me.png);
+            opacity: 0.6;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+            background-position: 35%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .massText {
+            font-size: 18px;
+            font-family: Host Grotesk;
+            font-weight: 400;
+            max-height: 60vh;
+            color: rgba(220, 220, 220, 0.808);
+            letter-spacing: 0px;
+            line-height: 1.1;
+
+        }
+
+        .massText span {
+            color: white;
+            font-weight: 600;
+        }
+
+
+
+        @media screen and (min-width:1700px) {
+
+            nav {
+                width: 75%;
+                margin: auto;
+            }
+
+            #mainDetails {
+                width: 80%;
+                margin: auto;
+            }
+
+            .right-box h1 {
+                font-size: 3rem;
+            }
+
+            .massText {
+                font-size: 1.5rem;
+            }
+
+        }
+        @media (max-width: 390px) {
+            .right-box h1{
+                font-size: 60px;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            #mainDetails{
+                padding: 0px 20px;
+            }
+
+
+            .right-box h1 {
+                font-size: 60px;
+                line-height: 1;
+            }
+
+            .none {
+                display: none;
+            }
+
+            .right-box{
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 370px) {
+            .right-box h1 {
+                font-size: 50px;
+                line-height: 1;
+            }
+
+
+            .right-box {
+                justify-content: start;
+            }
+
+            .contact-form-container {
+                height: 80vh;
+            }
+
+            .contact-form {
+                max-width: 80%;
+            }
+
+            ul {
+                flex-direction: column;
+                /* height: 60vh; */
+            }
+
+            #hireme {
+                background: #2726265c;
+                padding: 10px 19px;
+                border-radius: 8px;
+                transition: all 0.3s;
+                color: #4b4a4a;
+                cursor: unset;
+            }
+
+            .mobile-menu {
+                justify-content: center;
+            }
+
+            nav {
+                padding: 15px;
+            }
+
+            .left-box {
+                display: none;
+            }
+
+            .right-box {
+                width: 100%;
+            }
+
+            .massText {
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <nav class="animate__animated animate__fadeInDownBig">
+                <div class="logo">
+                    <a href="index.html" style="color: white;">
+                        <h1>AH</h1>
+                    </a>
+                    <div class="loader"></div>
+                </div>
+
+                <ul>
+                    <a id="backBtn" href="index.html#sec2">
+                        <li style="font-family: Montserrat;">Back</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="mainDetails">
+            <div class="left-box animate__animated animate__slideInLeft none"></div>
+            <div class="right-box animate__animated animate__slideInRight">
+                <h1>More About me<span style="color: gray;">.</span></h1>
+                <p class="massText">
+                    I'm Arhum, a dedicated student passionate about web development. At 17 years old, I am currently
+                    pursuing my studies at DJ Sindh Government Science College in Karachi, where I am honing my skills
+                    in <span>Advanced Web Development</span>. <br><br>
+
+                    With a strong foundation in these technologies, I am actively exploring the dynamic world of
+                    technologies and <span>full-stack development</span>, driven by a relentless curiosity and a desire
+                    to create impactful digital experiences. Through my studies and practical projects, I am continually
+                    enhancing my proficiency in building <span>responsive</span> and engaging web applications. <br><br>
+
+                    I am committed to staying abreast of the latest trends and best practices in
+                    <span>technology</span>, seeking out opportunities to expand my knowledge and contribute
+                    meaningfully to the ever-evolving landscape of technology. <br><br>
+
+                    As I continue to grow and learn, I am enthusiastic about connecting with fellow developers, mentors,
+                    and industry professionals to exchange insights, collaborate on innovative projects, and contribute
+                    positively to the vibrant web development community. <br><br>
+
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+        <script>
+            // JavaScript to handle the mobile menu toggle
+            const hamburgerIcon = document.querySelector('.hamburger-icon');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            // Toggle mobile menu on click
+            hamburgerIcon.addEventListener('click', () => {
+                if (mobileMenu.style.right === '0%') {
+                    mobileMenu.style.right = '-100%';
+                } else {
+                    mobileMenu.style.right = '0%';
+                }
+            });
+        </script>
+
+    </main>
+</body>
+
+</html>

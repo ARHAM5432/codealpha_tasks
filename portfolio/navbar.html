@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn-www.dora.run/__dora__/morpheus/static/images/ai/dora-ai.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="uiverse.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <title>Hire me - Arhum Hussain</title>
+    <style>
+        /* Your original CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+
+        * {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body::-webkit-scrollbar {
+            width: 2px;
+            background-color: #0f0f0f;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: white;
+        }
+
+        textarea::-webkit-scrollbar {
+            width: 4px;
+            background-color: #0f0f0f;
+        }
+
+        textarea::-webkit-scrollbar-thumb {
+            background-color: white;
+        }
+
+        ::-moz-selection {
+            /* Code for Firefox */
+            color: white;
+            background: gray;
+        }
+
+        ::selection {
+            color: white;
+            background: gray;
+        }
+
+        body {
+            background-color: #0f0f0f;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: "Syne", sans-serif;
+        }
+
+        header {
+            width: 100%;
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            /* Original padding */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            /* Original font size */
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 23px;
+        }
+
+        .loader {
+            width: 25px;
+            height: 25px;
+            background: #353535;
+            display: block;
+            margin-left: 10px;
+            box-sizing: border-box;
+            animation: rotationBack 1s ease-in-out infinite reverse;
+        }
+
+        .loader::before {
+            content: '';
+            box-sizing: border-box;
+            left: 0;
+            top: 0;
+            transform: rotate(45deg);
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: #2e2e2e;
+        }
+
+        .loader::after {
+            content: '';
+            box-sizing: border-box;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background: rgb(0, 0, 0);
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes rotationBack {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        /* Navbar Links */
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            /* Original gap */
+            align-items: center;
+        }
+
+        ul li {
+            color: rgb(168, 166, 166);
+            font-size: 14px;
+            /* Original font size */
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: rgb(168, 166, 166);
+            font-family: "Montserrat";
+        }
+
+        nav ul li:nth-child(5) {
+            background: #2726265c;
+            padding: 10px 19px;
+            /* Original padding */
+            border-radius: 8px;
+            transition: all 0.3s;
+            color: #4b4a4a;
+            cursor: unset;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #1a1a1a;
+            transition: right 0.4s ease;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            padding-top: 50px;
+            padding-left: 20px;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            font-size: 18px;
+            margin: 20px 0;
+            color: rgb(168, 166, 166);
+        }
+
+        /* Hamburger Icon */
+        .hamburger-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* Media query for mobile */
+        @media (max-width: 600px) {
+            .hamburger-icon {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .contact-form-container {
+                height: 80vh;
+            }
+
+            .contact-form {
+                max-width: 80%;
+            }
+
+            ul {
+                flex-direction: column;
+                height: 60vh;
+            }
+
+            #hireme {
+                background: #2726265c;
+                padding: 10px 19px;
+                border-radius: 8px;
+                transition: all 0.3s;
+                color: #4b4a4a;
+                cursor: unset;
+            }
+
+            .mobile-menu {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html" style="color: white;">
+                        <h1>AH</h1>
+                    </a>
+                    <div class="loader"></div>
+                </div>
+
+                <!-- Hamburger Icon for Mobile Menu -->
+                <div class="hamburger-icon">
+                    <i class="ri-menu-3-fill"></i>
+                </div>
+
+                <!-- Standard Navbar -->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#sec2">About</a></li>
+                    <li><a href="">Skills</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li style="font-family: Montserrat;">Hire me</li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Mobile Menu Content -->
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#sec2">About</a></li>
+                <li><a href="">Skills</a></li>
+                <li><a href="">Projects</a></li>
+                <li id="hireme">Hire me</li>
+            </ul>
+        </div>
+
+        <script>
+            // JavaScript to handle the mobile menu toggle
+            const hamburgerIcon = document.querySelector('.hamburger-icon');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            // Toggle mobile menu on click
+            hamburgerIcon.addEventListener('click', () => {
+                if (mobileMenu.style.right === '0%') {
+                    mobileMenu.style.right = '-100%';
+                } else {
+                    mobileMenu.style.right = '0%';
+                }
+            });
+        </script>
+
+    </main>
+</body>
+
+</html>
